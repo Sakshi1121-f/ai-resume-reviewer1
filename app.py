@@ -1,5 +1,10 @@
 import streamlit as st
-from src.resume_parser import get_resume_text, evaluate_resume
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
+
+from resume_parser import get_resume_text, evaluate_resume
+
 
 st.title("📄 AI Resume Reviewer")
 st.subheader("Upload your resume and paste a job description to get your ATS score and keyword feedback.")
